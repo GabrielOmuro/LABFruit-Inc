@@ -2,6 +2,7 @@ import Navbar from '../component/Navbar.jsx'
 import ReactInputMask from "react-input-mask"
 import InputMask from "react-input-mask"
 import { useNavigate } from "react-router-dom"
+import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 
 function CadEmpresas() {
@@ -17,6 +18,18 @@ function CadEmpresas() {
     const [cidade, setCidade] = useState('')
     const [estado, setEstado] = useState('')
     const navigate = useNavigate()
+    const empresa = {
+        razaosocial: razaosocial,
+        cnpj: cnpj,
+        nomefantasia: nomefantasia,
+        celular: celular,
+        cep: cep,
+        logradouro: logradouro,
+        numero: numero,
+        bairro: bairro,
+        cidade: cidade,
+        estado: estado,
+    }
 
     return (
         <div className="cadEmpresas">

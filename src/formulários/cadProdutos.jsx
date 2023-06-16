@@ -11,6 +11,13 @@ function CadProdutos() {
     const [fornecedorP, setFornecedorP] = useState('')
     const [tipo, setTipo] = useState('')
     const navigate = useNavigate()
+    const produtos = {
+        nome: nome,
+        descricao: descricao,
+        precounitario: precounitario,
+        fornecedorP: fornecedorP,
+        tipo: tipo,
+    }
 
     const handleChange2 = (event) => {
         setTipo(event.target.value);
