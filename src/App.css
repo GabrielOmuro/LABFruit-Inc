@@ -1,0 +1,9 @@
+.textoDeApresentacao{
+    font-size: 20px;
+    color: black;
+    margin: 100px;
+}
+
+body{
+    background: linear-gradient(to bottom, grey, purple,red);
+}
