@@ -46,6 +46,12 @@ function CadEmpresas() {
                     if (razaosocial === '' && cnpj === '' && nomefantasia === '' && celular === '' && cep === '' && logradouro === '' && numero === '' && bairro === '' && cidade === '' && estado === '') {
                         alert('AVISO: Preencha todos os campos!')
                     } else {
+                        const listaEmpresas = JSON.parse(localStorage.getItem("listaEmpresas")) || [];
+                        if (!Array.isArray(listaEmpresas)) {
+                            listaEmpresas = [];
+                        }
+                        listaEmpresas.push(empresa)
+                        localStorage.setItem("listaEmpresas", JSON.stringify(listaEmpresas))
                         alert('AVISO: Empresa cadastrado com sucesso!')
                         navigate("/home")
                     }

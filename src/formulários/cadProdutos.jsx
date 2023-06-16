@@ -20,10 +20,16 @@ function CadProdutos() {
         setFornecedorP(event.target.value);
     };
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('Opção selecionada:', tipo);
+
+    };
+
     return (
         <div className="cadProdutos">
             <NavBar />
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="nome">Nome:</label>
                 <input type="text" placeholder="Laranja"  onChange={(event) => setNome(event.target.value)}/>
                 <label htmlFor="descricao">Descrição:</label>
@@ -47,9 +53,15 @@ function CadProdutos() {
                     </select>
                 </div>
                 <button type="submit" className="cadBotao"  onClick={() => {
-                    if (nome === '' && descricao === '' && precounitario === '' && tipo === '' && fornecedor === '' && img === '') {
+                    if (nome === '' && descricao === '' && precounitario === '' && tipo === '' && fornecedor === '') {
                         alert('AVISO: Preencha todos os campos!')
                     } else {
+                        const listaProdutos = JSON.parse(localStorage.getItem("listaProdutos")) || [];
+                        if (!Array.isArray(listaProdutos)) {
+                            listaProdutos = [];
+                        }
+                        listaProdutos.push(produtos)
+                        localStorage.setItem("listaProdutos", JSON.stringify(listaProdutos))
                         alert('AVISO: Produto cadastrado com sucesso!')
                         navigate("/home")
                     }
