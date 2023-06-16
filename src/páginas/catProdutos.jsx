@@ -6,6 +6,7 @@ import './catProdutos.css'
 function ProdutoCard() {
     return (
         <div className="catModalcontainerP">
+                  <NavBar />
         </div>
     );
 }

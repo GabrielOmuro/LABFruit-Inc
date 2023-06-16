@@ -2,6 +2,7 @@ function ProdutoCard({ empresa }) {
 
     return (
         <div className="catModalcontainerE">
+                  <NavBar />
         </div>
     );
 }
