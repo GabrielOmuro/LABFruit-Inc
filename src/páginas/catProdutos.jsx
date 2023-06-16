@@ -1,7 +1,4 @@
-import { useEffect, useState } from "react";
-import Modal from "react-modal"
-import NavBar from "../component/Navbar.jsx";
-import './catProdutos.css'
+import Navbar from '../component/Navbar.jsx'
 
 function ProdutoCard() {
     return (

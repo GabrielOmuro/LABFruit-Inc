@@ -1,3 +1,5 @@
+import Navbar from '../component/Navbar.jsx'
+
 function ProdutoCard({ empresa }) {
 
     return (

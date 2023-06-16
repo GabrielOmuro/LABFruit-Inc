@@ -1,8 +1,7 @@
 function CadUsuario() {
+
     return (
         <div className="cadUsuarioContainer">
-                  <NavBar />
-
         </div>
     )
 }
