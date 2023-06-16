@@ -1,31 +1,55 @@
 import Navbar from '../component/Navbar.jsx'
+import ReactInputMask from "react-input-mask"
+import InputMask from "react-input-mask"
+import { useNavigate } from "react-router-dom"
+import { useState } from 'react'
 
 function CadEmpresas() {
+    const { register, handleSubmit, setValue, setFocus, getValues } = useForm()
+    const [razaosocial, setRazaosocial] = useState('')
+    const [cnpj, setCnpj] = useState('')
+    const [nomefantasia, setNomefantasia] = useState('')
+    const [celular, setCelular] = useState('')
+    const [cep, setCep] = useState('')
+    const [logradouro, setLogradouro] = useState('')
+    const [numero, setNumero] = useState('')
+    const [bairro, setBairro] = useState('')
+    const [cidade, setCidade] = useState('')
+    const [estado, setEstado] = useState('')
+    const navigate = useNavigate()
+
     return (
         <div className="cadEmpresas">
             <NavBar />
             <form>
                 <label htmlFor="razaosocial">Razão Social:</label>
-                <input type="text" name="razaosocial" value={razaosocial}/>
+                <input type="text" name="razaosocial" value={razaosocial} onChange={(event) => setRazaosocial(event.target.value)}/>
                 <label htmlFor="cnpj">CNPJ:</label>
-                <InputMask className="cnpj" value={cnpj} mask="99.999.999/9999-99" />
+                <InputMask className="cnpj" value={cnpj} mask="99.999.999/9999-99" onChange={(event) => setCnpj(event.target.value)} />
                 <label htmlFor="nomefantasia">Nome Fantasia:</label>
-                <input type="text" placeholder="Digite o nome fantasia da empresa" value={nomefantasia}/>
+                <input type="text" placeholder="Digite o nome fantasia da empresa" value={nomefantasia} onChange={(event) => setNomefantasia(event.target.value)}/>
                 <label htmlFor="celular">Celular:</label>
-                <InputMask mask="+99 99 99999-9999" value={celular}/>
+                <InputMask mask="+99 99 99999-9999" value={celular} onChange={(event) => setCelular(event.target.value)}/>
                 <label htmlFor="cep">CEP:</label>
-                <InputMask mask="99.999-999" name="cep" value={cep}/>
+                <InputMask mask="99.999-999" name="cep" value={cep} onChange={(event) => setCep(event.target.value)}/>
                 <label htmlFor="logradouro">Logradouro:</label>
-                <input type="text"/>
+                <input type="text" value={logradouro} onChange={(event) => setLogradouro(event.target.value)}/>
                 <label htmlFor="numero">Número:</label>
-                <input type="text" value={numero}/>
+                <input type="text" value={numero} onChange={(event) => setNumero(event.target.value)}/>
                 <label htmlFor="bairro">Bairro:</label>
-                <input type="text" value={bairro}/>
+                <input type="text" value={bairro} onChange={(event) => setBairro(event.target.value)}/>
                 <label htmlFor="cidade">Cidade:</label>
-                <input type="text" value={cidade}/>
+                <input type="text" value={cidade} onChange={(event) => setCidade(event.target.value)}/>
                 <label htmlFor="estado">Estado:</label>
-                <input type="text" value={estado}/>
-                <button type="submit">ENVIAR</button>
+                <input type="text" value={estado} onChange={(event) => setEstado(event.target.value)}/>
+                <button type="submit" onClick={() => {
+                    if (razaosocial === '' && cnpj === '' && nomefantasia === '' && celular === '' && cep === '' && logradouro === '' && numero === '' && bairro === '' && cidade === '' && estado === '') {
+                        alert('AVISO: Preencha todos os campos!')
+                    } else {
+                        alert('AVISO: Empresa cadastrado com sucesso!')
+                        navigate("/home")
+                    }
+                }}>ENVIAR</button>
             </form>
         </div>
     )

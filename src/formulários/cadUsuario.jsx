@@ -8,7 +8,17 @@ function CadUsuario() {
                 <input type="email"/>
                 <label htmlFor="senha">Senha:</label>
                 <input type="password"/>
-                <button type="submit">Cadastrar</button>
+                <button type="submit"  onClick={() => {if(email === ''){
+                     alert('AVISO: Preencha o campo de email!')
+                     return false
+                     }if(senha === ''){
+                        alert('AVISO: Preencha o campo de senha!')
+                        return false
+                     }else{
+                        alert('AVISO: Login efetuado com sucesso!')
+                        navigate("/login")
+                     }
+                     }}>Cadastrar</button>
             </form>
         </div>
     )
