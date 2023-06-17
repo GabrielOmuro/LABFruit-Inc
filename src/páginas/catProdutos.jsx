@@ -48,6 +48,15 @@ function ProdutoCard({ produto }) {
 
 function CatProdutos() {
     const [listaProdutos, setListaProdutos] = useState([]);
+    const [modalIsOpen1, setIsOpen] = useState(false);
+
+    function openModal1() {
+        setIsOpen(true);
+    }
+
+    function closeModal1() {
+        setIsOpen(false);
+    }
 
     useEffect(() => {
         const listaProdutosArmazenados = localStorage.getItem("listaProdutos");

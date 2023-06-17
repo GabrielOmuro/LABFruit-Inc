@@ -4,6 +4,10 @@
     margin: 100px;
 }
 
+.containerTextoApresentacao{
+    margin-top: 150px;
+}
+
 body{
     background: linear-gradient(to bottom, grey, purple,red);
 }

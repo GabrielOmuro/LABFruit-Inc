@@ -37,7 +37,7 @@ function ProdutoCard({ empresa }) {
                         <li>CNPJ: {empresa.cnpj}</li>
                         <li>Celular: {empresa.celular}</li>
                         <p className="catDivisoriaEndereco">Sobre o Endereço da empresa</p>
-                        <li>Estado: {empresa.cep}</li>
+                        <li>Cep: {empresa.cep}</li>
                         <li>Estado: {empresa.estado}</li>
                         <li>Cidade: {empresa.cidade}</li>
                         <li>Bairro: {empresa.bairro}</li>
@@ -54,6 +54,15 @@ function ProdutoCard({ empresa }) {
 
 function CatProdutos() {
     const [listaEmpresas, setListaEmpresas] = useState([]);
+        const [modalIsOpen, setIsOpen] = useState(false);
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
 
     useEffect(() => {
         const listaEmpresasArmazenadas = localStorage.getItem("listaEmpresas");
