@@ -7,7 +7,7 @@ import { useState } from 'react'
 import './cadProdutos.css'
 
 function CadEmpresas() {
-    const { register, handleSubmit, setValue, setFocus, getValues } = useForm()
+    const { register, handleSubmit, setValue, setFocus } = useForm()
     const [razaosocial, setRazaosocial] = useState('')
     const [cnpj, setCnpj] = useState('')
     const [nomefantasia, setNomefantasia] = useState('')
@@ -31,7 +31,7 @@ function CadEmpresas() {
         cidade: cidade,
         estado: estado,
     }
-
+    
     const buscarCep = (e) => {
         const cep = e.target.value.replace(/\D/g, '');
         console.log(cep);
