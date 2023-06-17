@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import './NavBar.css'
 
-function NavBar(){
+function Navbar(){
     return(
         <div className="Navbar">
             <img className="logo" src="./Logos/image.png" alt="LABFruit Inc" />
@@ -14,4 +14,4 @@ function NavBar(){
     )
 }
 
-export default NavBar
+export default Navbar

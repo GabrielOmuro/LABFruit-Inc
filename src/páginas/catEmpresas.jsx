@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Modal from "react-modal"
-import NavBar from "../component/Navbar.jsx";
+import Navbar from '../component/Navbar.jsx'
 import './catEmpresas.css'
 
 function ProdutoCard({ empresa }) {
@@ -64,7 +64,7 @@ function CatProdutos() {
 
     return (
         <div className="catConteinerE">
-            <NavBar />
+            <Navbar />
             <div className="catFlexE">
                 {listaEmpresas.map((empresa, index) => (
                     <ProdutoCard key={index} empresa={empresa} />

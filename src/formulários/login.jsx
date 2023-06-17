@@ -1,4 +1,13 @@
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
+import "./login.css"
+
+
 export default function Login() {
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
+    const navigate = useNavigate()
     return (
         <div>
             <h2 className="loginOucadastro">Faça seu Login ou Cadastre-se</h2>

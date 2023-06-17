@@ -3,6 +3,7 @@ import ReactInputMask from "react-input-mask"
 import InputMask from "react-input-mask"
 import { useNavigate } from "react-router-dom"
 import { useState } from 'react'
+import './cadEmpresas.css'
 
 function CadProdutos() {
     const [nome, setNome] = useState('')
@@ -35,7 +36,7 @@ function CadProdutos() {
 
     return (
         <div className="cadProdutos">
-            <NavBar />
+            <Navbar />
             <form onSubmit={handleSubmit}>
                 <label htmlFor="nome">Nome:</label>
                 <input type="text" placeholder="Laranja"  onChange={(event) => setNome(event.target.value)}/>
@@ -63,7 +64,7 @@ function CadProdutos() {
                     if (nome === '' && descricao === '' && precounitario === '' && tipo === '' && fornecedor === '') {
                         alert('AVISO: Preencha todos os campos!')
                     } else {
-                        const listaProdutos = JSON.parse(localStorage.getItem("listaProdutos")) || [];
+                        let listaProdutos = JSON.parse(localStorage.getItem("listaProdutos")) || [];
                         if (!Array.isArray(listaProdutos)) {
                             listaProdutos = [];
                         }
