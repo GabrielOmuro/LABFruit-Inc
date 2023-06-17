@@ -1,0 +1,43 @@
+.cadProdutos{
+    color: black;
+    background: linear-gradient(to bottom,grey , purple, red);
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    margin-top: 100px;
+    margin-left: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+input{
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 10px;
+    margin-left: 45px;
+}
+
+select{
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-left: 45px;
+}
+
+.cadBotao{
+    margin: 15px;
+    width: 100px;
+}
+
+input:hover{
+    width: 400px;
+    border: 1px solid blue;
+    border-radius: 6px;
+}
