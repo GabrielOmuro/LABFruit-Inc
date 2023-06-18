@@ -17,7 +17,13 @@ Bem-Vindo ao README do CPMS!
 
 • Tópico 6 - Sobre o Github.
 ー Sobre as Branches.
-   Foram criadas 2 branches com funções de desenvolvimento previstos, sendo elas Criação, Estilização ou Desenvolvimento das funcionaidades antes de serem enviadas a main. Sendo elas a branch de testagem e a de viaCep.
-ー Sobre a branch Testagem, cujas funcionalidades previstas para a criação, desenvolvimento das funcionalidades, estilização dos arquivos e ou atulização dos seguintes arquivos jsx: cadEmpresas, cadProdutos, cadUsuario, login, catEmpresas, catProdutos, App e main que é uma excessão pois não foi criado ou estilizado, foi apenas atualizado com as rotas. 
-ー Sobre a branch viaCep, foram previstas as seguintes funcionalidades: desenvolvimento do fetch viaCep.
-      
+   Foram criadas 9 branches com funções de desenvolvimento previstos, sendo elas Criação, Estilização ou Desenvolvimento das funcionaidades antes de serem enviadas a main. Sendo elas a branch de testagem e a de viaCep.
+ーfeature_criacaoDeArquivos: criar os arquivos necessários, 
+ーfeature_rotas1: criar as rotas e os Links, 
+ーfeature_criacaoDeForms1: criação dos formulários em geral, 
+ーfeature_validacaoDeForms1: criar useStates para a validação dos campos, 
+ーfeature_localStorage1: guardar as informações dos formulários no localstorage, 
+ーfeature_renderizacaoNosCatalogos1: para pegar a informação do localstorage e exibir nas páginas, 
+ーfeature_estilizacao1: estilizar todos os arquivos, 
+ーfeature_viaCep1: aplicar o fetch e o viaCep API e a 
+ーfeature_finalizacao: para correção de erros e bugs. 
