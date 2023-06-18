@@ -17,7 +17,7 @@ Bem-Vindo ao README do CPMS!
 
 • Tópico 6 - Sobre o Github.
 ー Sobre as Branches.
-   Foram criadas 9 branches com funções de desenvolvimento previstos, sendo elas Criação, Estilização ou Desenvolvimento das funcionaidades antes de serem enviadas a main. Sendo elas a branch de testagem e a de viaCep.
+   Foram criadas 9 branches com funções de desenvolvimento previstos, sendo elas Criação, Estilização ou Desenvolvimento das funcionaidades antes de serem enviadas a main. Sendo elas:
 ーfeature_criacaoDeArquivos: criar os arquivos necessários, 
 ーfeature_rotas1: criar as rotas e os Links, 
 ーfeature_criacaoDeForms1: criação dos formulários em geral, 
